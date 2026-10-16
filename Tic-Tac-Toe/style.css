@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    --gameBackground: #000000;
+    --background: #0A060E;
+    --button: #4CAF50;
+    --text-color: #fff;
+    --border: #7A00FF;
+    --x: #C084FC;
+    --o: #22D3EE;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--background);
+}
+.status{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    gap: 20px;
+}
+#status {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    text-align: center;
+}
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+   background-color: var(--gameBackground);
+}
+.cell {
+    background-color: var(--gameBackground);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: inset 0 0 20px var(--border);
+}
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--text-color);
+    text-shadow: 0 0 10px var(--border);
+}
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 0 0 10px var(--border);
+}
+#resetButton {
+    background-color: var(--background);
+    color: var(--text-color);
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 300px;
+    border: 2px solid var(--border);
+    box-shadow: 0 0 15px var(--border);
+}
+.cell:hover {
+    background-color: #1f0d31;
+    box-shadow: inset 0 0 20px var(--border);
+}
+.cell.x {
+    color: var(--x);
+     text-shadow: 0 0 10px var(--x);
+     font-family: 'Courier New', Courier, monospace;
+     font-size: 3rem;
+
+}
+.cell.o {
+    color: var(--o);
+     text-shadow: 0 0 10px var(--o);
+     font-family: 'Courier New', Courier, monospace;
+     font-size: 3rem;
+}
